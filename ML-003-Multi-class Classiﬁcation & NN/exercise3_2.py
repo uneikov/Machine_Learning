@@ -9,11 +9,13 @@ In next topic, we will write the backpropagation algorithm for learning the neur
 
 import numpy as np
 from logreg_cost_function import h
+from pathlib import Path
 
-file_path_X = 'C:/Users/uran-desktop/Documents/Octave/mlclass-ex3/mlclass-ex3/ex3data1X.npy'
-file_path_Y = 'C:/Users/uran-desktop/Documents/Octave/mlclass-ex3/mlclass-ex3/ex3data1Y.npy'
-file_path_T1 = 'C:/Users/uran-desktop/Documents/Octave/mlclass-ex3/mlclass-ex3/ex3weights1.npy'
-file_path_T2 = 'C:/Users/uran-desktop/Documents/Octave/mlclass-ex3/mlclass-ex3/ex3weights2.npy'
+ML_dir = Path.cwd().parent
+file_path_X = ML_dir / 'Training data/ex3data1X.npy'
+file_path_Y = ML_dir / 'Training data/ex3data1Y.npy'
+file_path_T1 = ML_dir / 'Training data/ex3weights1.npy'
+file_path_T2 = ML_dir / 'Training data/ex3weights2.npy'
 
 # Load input data
 X = np.load(file_path_X)
